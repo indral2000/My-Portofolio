@@ -195,11 +195,8 @@ img {
   color: var(--first-color);
 }
 .home__social {
-  flex-direction: row; /* Mengatur arah menjadi baris */
-    justify-content: flex-end; /* Menyelaraskan ikon ke kanan */
-    gap: 20px; /* Jarak antar ikon */
-    align-items: center; /* Menyelaraskan ikon secara vertikal */
-    margin-top: 1rem; /* Menambahkan margin atas jika perlu */
+  display: flex;
+  flex-direction: column;
 }
 .home__social-icon {
   width: max-content;
@@ -213,7 +210,7 @@ img {
 .home__img {
   position: absolute;
   right: 0;
-  bottom: 0;
+  bottom: 15%;
   width: 260px;
 }
 .home__blob {
@@ -376,6 +373,7 @@ img {
   }
   .home__img {
     width: 200px;
+    margin-top: -50px;
   }
 }
 @media screen and (min-width: 576px) {
