@@ -195,13 +195,16 @@ img {
   color: var(--first-color);
 }
 .home__social {
-  display: flex;
-  flex-direction: column;
+  flex-direction: row; /* Mengatur arah menjadi baris */
+    justify-content: flex-end; /* Menyelaraskan ikon ke kanan */
+    gap: 20px; /* Jarak antar ikon */
+    align-items: center; /* Menyelaraskan ikon secara vertikal */
+    margin-top: 1rem; /* Menambahkan margin atas jika perlu */
 }
 .home__social-icon {
   width: max-content;
   margin-bottom: var(--mb-2);
-  font-size: 1.5rem;
+  font-size: 50px;
   color: var(--second-color);
 }
 .home__social-icon:hover {
