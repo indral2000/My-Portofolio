@@ -337,7 +337,27 @@ img{
     }
 }
 
-
+/* ===== CONTACT =====*/
+.contact{
+    &__input{
+        width: 100%;
+        font-size: var(--normal-font-size);
+        font-weight: var(--font-semi);
+        padding: 1rem;
+        border-radius: .5rem;
+        border: 1.5px solid var(--second-color);
+        outline: none;
+        margin-bottom: var(--mb-4);
+    }
+    &__button{
+        display: block;
+        border: none;
+        outline: none;
+        font-size: var(--normal-font-size);
+        cursor: pointer;
+        margin-left: auto;
+    }
+}
 
 /* ===== FOOTER =====*/
 .footer{
@@ -501,29 +521,5 @@ img{
         &__img{
             width: 450px;
         }
-    }
-}
-
-/* Tablet */
-@media screen and (min-width: 576px) and (max-width: 768px) {
-    .home__img {
-        width: 300px;
-        bottom: 25%;
-    }
-    .about__container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-/* Mobile */
-@media screen and (max-width: 576px) {
-    .home {
-        padding: 2rem 0;
-    }
-    .home__img {
-        width: 200px;
-    }
-    .nav__menu {
-        width: 100%;
     }
 }
