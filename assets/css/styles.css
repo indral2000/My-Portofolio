@@ -322,7 +322,25 @@ img {
   transform: scale(1.1);
 }
 
-
+/* ===== CONTACT =====*/
+.contact__input {
+  width: 100%;
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-semi);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1.5px solid var(--second-color);
+  outline: none;
+  margin-bottom: var(--mb-4);
+}
+.contact__button {
+  display: block;
+  border: none;
+  outline: none;
+  font-size: var(--normal-font-size);
+  cursor: pointer;
+  margin-left: auto;
+}
 
 /* ===== FOOTER =====*/
 .footer {
@@ -466,69 +484,6 @@ img {
     width: 450px;
   }
 }
-
-/* Tablet */
-@media screen and (min-width: 576px) and (max-width: 768px) {
-    .home__img {
-        width: 300px;
-        bottom: 25%;
-    }
-    .about__container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-/* Mobile */
-@media screen and (max-width: 576px) {
-    .home {
-        padding: 2rem 0;
-    }
-    .home__img {
-        width: 200px;
-    }
-    .nav__menu {
-        width: 100%;
-    }
-}
-
-/* ===== Custom Styling for Resume Button and Social Icons ===== */
-.home__social-icon {
-    font-size: 32px; 
-    color: var(--second-color);
-    display: flex; 
-    align-items: center;
-    justify-content: center;
-    transition: color 0.3s ease;
-}
-
-.home__social-icon:hover {
-    color: var(--first-color); 
-}
-
-.home__social {
-    display: flex; 
-    gap: 20px; 
-    align-items: center; 
-}
-
-.button {
-    padding: 0.75rem 2rem;
-    font-size: var(--normal-font-size);
-    font-weight: var(--font-semi);
-    border-radius: 5px;
-    background-color: var(--first-color);
-    color: #fff;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
-
-.button:hover {
-    background-color: hsl(var(--hue-color), 89%, 50%);
-}
-
-/* Responsive adjustment for smaller screens */
-@media (max-width: 768px) {
-    .home__social {
         flex-direction: column;
         gap: 10px;
     }
