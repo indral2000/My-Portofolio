@@ -55,3 +55,13 @@ sr.reveal('.home__data, .about__img, .skills__subtitle, .skills__text',{});
 sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img',{delay: 400}); 
 sr.reveal('.home__social-icon',{ interval: 200}); 
 sr.reveal('.skills__data, .work__img, .contact__input',{interval: 200}); 
+
+// Pilih elemen input checkbox
+const toggle = document.getElementById("darkmode-toggle");
+
+// Tambahkan event listener untuk klik pada toggle
+toggle.addEventListener("change", () => {
+  // Toggle class 'dark-mode' pada body
+  document.body.classList.toggle("dark-mode");
+});
+
