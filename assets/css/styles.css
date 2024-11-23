@@ -1,3 +1,80 @@
+/* Warna ikon untuk mode biasa */
+.nav__toggle i {
+  color: var(--second-color);
+  transition: 0.3s;
+}
+
+/* Warna ikon untuk mode malam */
+body.dark-mode .nav__toggle i {
+  color: var(--dark-text); /* Warna untuk mode malam */
+}
+
+
+label {
+  width: 70px; /* Lebar lebih besar */
+  height: 35px; /* Tinggi lebih besar */
+  position: relative;
+  display: block;
+  background: #ebebeb;
+  border-radius: 35px; /* Sesuai tinggi untuk bentuk oval */
+  box-shadow: inset 0px 3px 7px rgba(0, 0, 0, 0.4), inset 0px -3px 7px rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+label:after {
+  content: "";
+  width: 28px; /* Ukuran tombol lebih besar */
+  height: 28px;
+  position: absolute;
+  top: 3.5px; /* Setengah dari selisih tinggi label dan tombol */
+  left: 3.5px; /* Sama seperti di atas */
+  background: linear-gradient(180deg, #ffcc89, #d8860b);
+  border-radius: 50%;
+  box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+input:checked + label:after {
+  left: 38.5px; /* Lebar label - lebar tombol - margin */
+  transform: translateX(0);
+  background: linear-gradient(180deg, #777, #3a3a3a);
+}
+
+label svg {
+  position: absolute;
+  width: 20px; /* Ukuran ikon lebih besar */
+  height: 20px;
+  top: 7.5px; /* Posisi lebih proporsional */
+  z-index: 100;
+}
+
+label svg.sun {
+  left: 7px; /* Posisi lebih dekat ke tombol */
+  fill: #fff;
+  transition: 0.3s;
+}
+
+label svg.moon {
+  right: 7px; /* Posisi di kanan */
+  fill: #7e7e7e;
+  transition: 0.3s;
+}
+
+input:checked + label svg.sun {
+  fill: #7e7e7e;
+}
+
+input:checked + label svg.moon {
+  fill: #fff;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+
+
 /*===== GOOGLE FONTS =====*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 /*===== VARIABLES CSS =====*/
@@ -24,7 +101,47 @@
   /*===== z index =====*/
   --z-back: -10;
   --z-fixed: 100;
+
+  --dark-bg: #121212; /* Warna latar belakang untuk mode malam */
+  --dark-text: #e0e0e0; /* Warna teks utama untuk mode malam */
 }
+
+body.dark-mode {
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
+}
+
+body.dark-mode .l-header {
+  background-color: var(--dark-bg);
+  box-shadow: none; /* Hilangkan bayangan untuk kesan datar */
+}
+
+body.dark-mode .section-title,
+body.dark-mode .nav__link {
+  color: var(--dark-text);
+}
+
+body.dark-mode .nav__link:hover::after {
+  background-color: var(--dark-text);
+}
+
+body.dark-mode .home__social-icon, 
+body.dark-mode .footer__icon, 
+body.dark-mode .footer__title, 
+body.dark-mode .footer__copy {
+    color: var(--dark-text); /* Warna teks mode malam */
+}
+
+body.dark-mode .nav__logo {
+    color: var(--dark-text); /* Warna logo navigasi */
+}
+
+/* Warna ikon hover */
+body.dark-mode .home__social-icon:hover, 
+body.dark-mode .footer__icon:hover {
+    color: var(--first-color); /* Gunakan warna utama (misalnya ungu) untuk efek hover */
+}
+
 @media screen and (min-width: 968px) {
   :root {
     --big-font-size: 3.5rem;
