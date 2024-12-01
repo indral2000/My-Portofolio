@@ -56,7 +56,7 @@ label svg.sun {
 }
 
 label svg.moon {
-  right: 7px; /* Posisi di kanan */
+  right: 7.5px; /* Posisi di kanan */
   fill: #7e7e7e;
   transition: 0.3s;
 }
