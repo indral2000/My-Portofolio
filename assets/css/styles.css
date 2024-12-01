@@ -50,7 +50,7 @@ label svg {
 }
 
 label svg.sun {
-  left: 7px; /* Posisi lebih dekat ke tombol */
+  left: 6.5px; /* Posisi lebih dekat ke tombol */
   fill: #fff;
   transition: 0.3s;
 }
