@@ -25,8 +25,10 @@ body.dark-mode {
 }
 
 [data-dark-mode=true] {
-    --bg: hsl(219, 30%, 12%) --color: hsl(219, 30%, 98%)
+    --bg: hsl(219, 30%, 12%);
+    --color: hsl(219, 30%, 98%);
 }
+
 
 
 
@@ -91,7 +93,7 @@ body.dark-mode {
     width: 100%;
     left: 0;
     transition: translate var(--speed) var(--easing);
-    translate: 0 calc(var(--dark, 0) * (100% - (3 / 8 * var(--width))));
+    transform: translate(0, calc(var(--dark, 0) * (100% - (3 / 8 * var(--width)))));
 }
 
 [aria-pressed=false] .toggle__backdrop:last-of-type {
